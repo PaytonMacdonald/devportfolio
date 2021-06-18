@@ -21,3 +21,26 @@ main {
   display: flex;
   align-items: stretch;
 }
+header{
+  background-image: url(./assets/img/backgroundGeometricPatternGreen.png);
+}
+footer{
+  background-image: url(./assets/img/backgroundGeometricPatternCarbon.png);
+}
+body{
+  background-image: url(./assets/img/backgroundGeometricPattern.png);
+}
+@media only screen and (min-width:1500px){
+  body {
+      margin-left: 10vw;
+      margin-right: 10vw;
+      
+  }
+}
+@media only screen and (min-width:1000px){
+  body {
+      margin-left: 5vw;
+      margin-right: 5vw;
+      
+  }
+}

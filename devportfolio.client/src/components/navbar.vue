@@ -1,127 +1,60 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
-        <img
-          alt="logo"
-          src="../assets/img/cw-logo.png"
-          height="45"
-        />
+  <nav class="container-fluid">
+    <!-- SECTION Desktop -->
+    <div class="row text-white p-2 mobile-gone">
+      <div class="col">
+        <router-link :to="{ name: 'Home' }" class="text-white">
+          <span class="logo-font">Payton's Portfolio</span>
+        </router-link>
       </div>
-    </router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarText"
-      aria-controls="navbarText"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon" />
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <router-link :to="{ name: 'Home' }" class="nav-link">
-            Home
-          </router-link>
-        </li>
-        <li class="nav-item">
-          <router-link :to="{ name: 'About' }" class="nav-link">
-            About
-          </router-link>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        <button
-          class="btn btn-outline-primary text-uppercase"
-          @click="login"
-          v-if="!user.isAuthenticated"
-        >
-          Login
-        </button>
 
-        <div class="dropdown" v-else>
-          <div
-            class="dropdown-toggle"
-            @click="state.dropOpen = !state.dropOpen"
-          >
-            <img
-              :src="user.picture"
-              alt="user photo"
-              height="40"
-              class="rounded"
-            />
-            <span class="mx-3">{{ user.name }}</span>
-          </div>
-          <div
-            class="dropdown-menu p-0 list-group w-100"
-            :class="{ show: state.dropOpen }"
-            @click="state.dropOpen = false"
-          >
-            <router-link :to="{ name: 'Account' }">
-              <div class="list-group-item list-group-item-action hoverable">
-                Account
-              </div>
-            </router-link>
-            <div
-              class="list-group-item list-group-item-action hoverable"
-              @click="logout"
-            >
-              logout
-            </div>
-          </div>
-        </div>
-      </span>
+      <div class="col d-flex justify-content-end align-items-center">
+        <router-link :to="{ name: 'About' }" class="text-white">
+          <button type="button" class="btn btn-outline-light">
+            Contact Payton
+          </button>
+        </router-link>
+      </div>
+    </div>
+    <!-- SECTION Mobile -->
+    <div class="row text-white p-2 desktop-gone text-center">
+      <div class="col">
+        <router-link :to="{ name: 'Home' }" class="text-white">
+          <span class="logo-font">Payton's Portfolio</span>
+        </router-link>
+      </div>
+    </div>
+    <div class="row desktop-gone pb-3">
+      <div class="col d-flex flex-column justify-content-end align-items-center">
+        <router-link :to="{ name: 'About' }" class="text-white">
+          <button type="button" class="btn btn-outline-light btn-lg mt-2">
+            Contact Payton
+          </button>
+        </router-link>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
-import { AuthService } from '../services/AuthService'
-import { AppState } from '../AppState'
-import { computed, reactive } from 'vue'
+import { useRoute } from 'vue-router'
+
 export default {
   name: 'Navbar',
   setup() {
-    const state = reactive({
-      dropOpen: false
-    })
+    const route = useRoute()
     return {
-      state,
-      user: computed(() => AppState.user),
-      async login() {
-        AuthService.loginWithPopup()
-      },
-      async logout() {
-        await AuthService.logout({ returnTo: window.location.origin })
-      }
+      route
     }
   }
 }
+
 </script>
 
 <style scoped>
-.dropdown-menu {
-  user-select: none;
-  display: block;
-  transform: scale(0);
-  transition: all 0.15s linear;
+.logo-font{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
 }
-.dropdown-menu.show {
-  transform: scale(1);
-}
-.hoverable {
-  cursor: pointer;
-}
-a:hover {
-  text-decoration: none;
-}
-.nav-link{
-  text-transform: uppercase;
-}
-.nav-item .nav-link.router-link-exact-active{
-  color: var(--primary);
-}
+
 </style>
