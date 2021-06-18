@@ -1,0 +1,13 @@
+{
+  "name": "devportfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run setup:client && npm run setup:server",
+    "setup:client": "cd devportfolio.client && npm i",
+    "setup:server": "cd devportfolio.server && npm i",
+    "start": "node devportfolio.server/index.js"
+  },
+  "engines": {
+    "node": "^14.15.4"
+  }
+}
