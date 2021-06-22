@@ -69,10 +69,10 @@ export default {
 }
 .box-hover:hover{
   cursor: pointer;
-  opacity: 90%;
+
 }
 .box-hover:active{
-  opacity: 80%;
+
 }
 
 </style>
