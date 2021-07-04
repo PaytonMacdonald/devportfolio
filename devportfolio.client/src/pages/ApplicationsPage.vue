@@ -21,7 +21,7 @@
                   <div class="row">
                     <div class="col border-bottom">
                       <h3 class="text-dark text-center">
-                        MoneyFit: Debt
+                        MoneyFit Website
                       </h3>
                     </div>
                   </div>
@@ -29,6 +29,39 @@
                     <div class="col">
                       <p class="text-dark">
                         Devleoped and maintained MoneyFit by DRS company website from 2019-2021. I created the branding for the mirror service and updated over 100+ pages.<br> <b>SquareSpace, HTML, CSS</b>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!--  -->
+    <!-- CARD Keepr -->
+    <div class="row mt-3">
+      <div class="col d-flex justify-content-center">
+        <a href="https://payton-keepr.herokuapp.com/" target="_blank">
+          <div class="card wide-card shadow no-select">
+            <div class="card-body">
+              <div class="row">
+                <div class="col col-md-5 d-flex justify-content-center mb-3 mb-md-0">
+                  <img class="rounded" src="../assets/img/KeepRLogo.png" alt="">
+                </div>
+                <div class="col">
+                  <div class="row">
+                    <div class="col border-bottom">
+                      <h3 class="text-dark text-center">
+                        Keepr: Photo Sharing App
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="row mt-1">
+                    <div class="col">
+                      <p class="text-dark">
+                        Full Stack Application with MySQL database. Users can create and save images to their vaults<br> <b>VUE.js, C#, MySQL, HTML5, SCSS</b>
                       </p>
                     </div>
                   </div>
