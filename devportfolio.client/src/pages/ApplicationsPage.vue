@@ -199,6 +199,7 @@ export default {
 <style lang="scss" scoped>
 .wide-card{
   width: 75vw;
+  height: 25vw;
 }
 .box-picture{
   height: 250px;
