@@ -28,7 +28,7 @@
                   <div class="row mt-1">
                     <div class="col">
                       <p class="text-dark">
-                        Devleoped and maintained MoneyFit by DRS company website from 2019-2021. Created branding for and updated over 100+ pages.<br> <b>SquareSpace, HTML, CSS</b>
+                        Devleoped and maintained MoneyFit by DRS company website from 2019-2021. Polished branding and updated over 100+ pages.<br> <b>SquareSpace, HTML, CSS</b>
                       </p>
                     </div>
                   </div>
