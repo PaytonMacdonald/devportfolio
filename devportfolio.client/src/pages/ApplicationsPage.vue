@@ -44,7 +44,7 @@
     <div class="row mt-4 mt-md-5">
       <div class="col">
         <h1 class="logo-font text-center">
-          FULL STACK APPLCIATIONS
+          FULL STACK APPLICATIONS
         </h1>
       </div>
     </div>
